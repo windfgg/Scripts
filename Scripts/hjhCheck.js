@@ -1,14 +1,16 @@
 var axios = require("axios");
 var qs = require("qs");
 
+//好家伙机场邮箱
 email = "";
+//好家伙机场密码
 passwd = "";
 
 cookie = "";
 function start() {
   console.log("开始执行机场签到,登陆中...");
   let body = qs.stringify({
-    //好家伙机场邮箱
+
     email,
     //好家伙机场密码
     passwd,
@@ -32,7 +34,7 @@ function start() {
         console.log("登录成功");
         this.cookie = response.headers["set-cookie"];
         //console.log(response.headers["set-cookie"]);
-        console.log("获取Cookie成功,正在运行签到");
+        console.log("获取Cookie成功,正在运行签到...");
         checkin();
       } else {
         console.log("登录失败" + response.data.msg);
@@ -71,6 +73,6 @@ function checkin() {
     });
 }
 
-module.exports = start();
+//module.exports = start();
 
 start();
