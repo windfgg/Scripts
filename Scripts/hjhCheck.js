@@ -1,6 +1,9 @@
 var axios = require("axios");
 var qs = require("qs");
 
+//注册地址:haojiahuo.live/auth/register?code=FErc
+//便宜3.99 50g 签到每天1g-4g随机 速度快 提供小火箭下载共享账号
+
 //好家伙机场邮箱
 email = "";
 //好家伙机场密码
@@ -10,9 +13,7 @@ cookie = "";
 function start() {
   console.log("开始执行机场签到,登陆中...");
   let body = qs.stringify({
-
     email,
-    //好家伙机场密码
     passwd,
     remember_me: "on",
   });
