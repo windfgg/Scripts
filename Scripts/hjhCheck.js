@@ -1,5 +1,6 @@
 var axios = require("axios");
 var qs = require("qs");
+const notify = require("./sendNotify");
 
 //注册地址:haojiahuo.live/auth/register?code=FErc
 //便宜3.99 50g 签到每天1g-4g随机 速度快 提供小火箭下载共享账号
@@ -9,7 +10,7 @@ email = "";
 //好家伙机场密码
 passwd = "";
 
-cookie = "";
+let cookie = "";
 function start() {
   console.log("开始执行机场签到,登陆中...");
   let body = qs.stringify({
@@ -38,7 +39,10 @@ function start() {
         console.log("获取Cookie成功,正在运行签到...");
         checkin();
       } else {
-        console.log("登录失败" + response.data.msg);
+        let msg = "登录失败" + response.data.msg;
+
+        notify.sendNotify("好家伙机场签到", msg);
+        console.log(msg);
       }
     })
     .catch(function (error) {
@@ -59,13 +63,16 @@ function checkin() {
   axios(request)
     .then(function (response) {
       if (response.data.ret == 1) {
-        console.log(
+        let msg =
           "签到成功" +
-            response.data.msg +
-            "您的当前流量为" +
-            response.data.trafficInfo["unUsedTraffic"]
-        );
+          response.data.msg +
+          "您的当前流量为" +
+          response.data.trafficInfo["unUsedTraffic"];
+
+        notify.sendNotify("好家伙机场签到", msg);
+        console.log(msg);
       } else {
+        notify.sendNotify("好家伙机场签到", response.data.msg);
         console.log(response.data.msg);
       }
     })
