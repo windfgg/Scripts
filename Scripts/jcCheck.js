@@ -10,8 +10,8 @@ https://raw.githubusercontent.com/QiFengg/QuantumultX_Conf/main/Scripts/jcCheck.
 注册地址:haojiahuo.live/auth/register?code=FErc
 */
 let hjh = {
-  email: "2628791395@qq.com",
-  pwd: "cw520999..",
+  email: "",
+  pwd: "",
 };
 
 /*
@@ -34,8 +34,8 @@ let iku = {
 */
 
 let jj = {
-  email: "2628791395@qq.com",
-  pwd: "cw520999..",
+  email: "",
+  pwd: "",
 };
 
 const $ = new Env("机场签到");
