@@ -50,7 +50,6 @@ const notify = $.isNode() ? require("./sendNotify") : "";
     ).toLocaleString()}=====\n`
   );
   if (hjh.email == "" && hjh.pwd == "") {
-    allmsg += "好家伙邮箱密码为空,跳过执行\n\n";
     console.log("好家伙邮箱密码为空,跳过执行\n\n");
   } else {
     await login("好家伙", "https://haojiahuo.live/auth/login", hjh);
