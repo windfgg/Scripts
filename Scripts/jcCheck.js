@@ -150,7 +150,7 @@ function check(name, checkurl, cookie) {
           } else if (name == "iku") {
             msg = `${name}签到成功` + data.msg;
           } else if (name == "几鸡") {
-            checkurl =
+            msg =
               `${name}签到成功` + data.msg + "您的当前流量为" + data.traffic;
           }
           console.log(`${name}机场 ${msg}\n\n`);
