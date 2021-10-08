@@ -197,9 +197,6 @@ async function sendNotify(
       if(text.indexOf("资产")==-1){
         return
       }
-      if(text.indexOf("白嫖")==-1){
-        return
-      }
   }
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
