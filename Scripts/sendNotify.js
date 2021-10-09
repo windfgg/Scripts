@@ -190,7 +190,7 @@ async function sendNotify(
   author = '',
 ) {
   //署名
-  author=authorStr
+  author='\n'+authorStr
   if(text.indexOf("资产")==-1 && text.indexOf("白嫖")==-1)
   //只接受资产通知其他通知屏蔽
   if(isSendNotify){
