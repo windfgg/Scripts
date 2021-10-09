@@ -191,11 +191,14 @@ async function sendNotify(
 ) {
   //署名
   author=authorStr
+  if(text.indexOf("资产")==-1 && text.indexOf("白嫖")==-1)
   //只接受资产通知其他通知屏蔽
   if(isSendNotify){
       console.log('\n只接受资产通知 其他通知跳过\n')
       if(text.indexOf("资产")==-1 && text.indexOf("白嫖")==-1){
-        return
+        if(text.indexOf("失效")==-1 && desp.indexOf("重新登录")==-1){
+          return
+        }
       }
   }
   //提供6种通知
