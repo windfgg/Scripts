@@ -179,7 +179,7 @@ if (process.env.PUSH_PLUS_USER) {
  * @returns {Promise<unknown>}
  */
 
-//是否只接受资产推送屏蔽其他推送 默认为false 如需启用请在环境变量添加sendNotify为true
+//是否只接受资产推送屏蔽其他推送 默认为false 如需启用请在环境变量添加isSendNotify为true
 var isSendNotify = $.isNode() ? process.env.isSendNotify:false 
 //尾部署名 例：`本通知 By：https://github.com/whyour/qinglong` 如需要填写请在环境变量添加authorStr
 var authorStr = $.isNode() ? process.env.authorStr:''  
@@ -194,7 +194,7 @@ async function sendNotify(
   //只接受资产通知其他通知屏蔽
   if(isSendNotify){
       console.log('\n只接受资产通知 其他通知跳过\n')
-      if(text.indexOf("资产")==-1){
+      if(text.indexOf("资产")==-1 && text.indexOf("白嫖")==-1){
         return
       }
   }
