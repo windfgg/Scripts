@@ -2,7 +2,6 @@
  cron 0 * 8,16,21 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
  邀请链接：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
- 扫码获取百度CK机器人:jjjjbai
  每天执行三次 可能有一些任务跑不完 如:高级搜索 浏览监控日报 属正常现象 (百度抽风)
  多账号请用@分割Cookie  格式:ck1@ck2@ck2 青龙变量aqcCookies qx和v2p暂时不可使用
  批量查询任务暂时无法完成 
@@ -289,7 +288,7 @@ async function aqc() {
     }
   } else {
     msg +=
-      "请添加微信机器人:jjjjbai回复:爱企查 登录 扫码获取Cookie 或 手动抓取";
+      "请手动抓取cookies";
   }
   console.log(msg);
   await notify.sendNotify($.name, msg);
@@ -308,7 +307,7 @@ if (aqcookie) {
   //console.log("爱企查共:" + aqcookieArr.length + "个账号");
 } else {
   console.log(
-    "请添加微信机器人扫码获取Cookie:jjjjbai\r\n回复:爱企查 登录 \r\n 或手动抓取百度ck"
+    "请手动抓取cookies"
   );
   return;
 }
