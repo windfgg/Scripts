@@ -1,5 +1,5 @@
 /*
- 0 * 8,16,21 * * ? https://raw.githubusercontent.com/smiek2221/scripts/master/gua_wealth_island.js 爱企查日常任务
+ cron 0 * 8,16,21 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
  邀请链接：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
  扫码获取百度CK机器人:jjjjbai
