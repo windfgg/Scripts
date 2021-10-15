@@ -1,5 +1,5 @@
 /*
- cron 0 * 8,16,21 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
+ cron 0 0 8,16,21 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
  下载地址：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
  手动抓取CK:https://passport.baidu.com/v2/?login 一个整个ck复制
