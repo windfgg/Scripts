@@ -1,7 +1,8 @@
 /*
  cron 0 * 8,16,21 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
- 邀请链接：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
+ 下载地址：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
+ 手动抓取CK:https://passport.baidu.com/v2/?login 一个整个ck复制
  每天执行三次 可能有一些任务跑不完 如:高级搜索 浏览监控日报 属正常现象 (百度抽风)
  多账号请用@分割Cookie  格式:ck1@ck2@ck2 青龙变量aqcCookies qx和v2p暂时不可使用
  批量查询任务暂时无法完成 
