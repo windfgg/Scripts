@@ -325,7 +325,7 @@ function readShareCode() {
             }
           }
         } catch (e) {
-          $.logErr(e, resp);
+          //$.logErr(e, resp);
         } finally {
           resolve(null);
         }
