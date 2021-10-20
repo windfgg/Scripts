@@ -92,6 +92,9 @@ async function getaskList() {
     `共 ${alltaskList.length}任务 已完成 ${ytaskList.length} 任务 可做 ${taskList.length}任务 ${claimList.length}任务可领取奖励`
   );
 }
+function radomTimers() {
+  return Math.floor(Math.random() * (20000 - 5000) + 1);
+}
 
 async function dotask(taskList) {
   for (var o of taskList) {
@@ -106,7 +109,7 @@ async function dotask(taskList) {
       case "CX11001": //查询企业
         console.log("开始任务：" + oo[o.title]);
         await get(`s/getHeadBrandAndPersonAjax?q=${encodeURI(rand())}`, "get");
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11002": //查询老板
         console.log("开始任务：" + oo[o.title]);
@@ -114,7 +117,7 @@ async function dotask(taskList) {
           `person/relevantPersonalAjax?page=1&q=${encodeURI(rand())}&size=10`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11003": //查询老赖
         console.log("开始任务：" + oo[o.title]);
@@ -124,7 +127,7 @@ async function dotask(taskList) {
           )}&t=8&s=10&p=1&f=%7B%22type%22:%221%22%7D`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11004": //查询商标
         console.log("开始任务：" + oo[o.title]);
@@ -132,7 +135,7 @@ async function dotask(taskList) {
           `c/markproAjax?q=${encodeURI(rand())}&p=1&s=10&f=%7B%7D&o=%7B%7D`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11005": //查询地图
         console.log("开始任务：" + oo[o.title]);
@@ -140,7 +143,7 @@ async function dotask(taskList) {
           `map/getAdvanceFilterListAjax?longitude=113.76343399&latitude=23.04302382&distance=2&page=1`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11006": //浏览新闻
         console.log("开始任务：" + oo[o.title]);
@@ -171,7 +174,7 @@ async function dotask(taskList) {
           `relations/findrelationsAjax?from=e07a8ef1409bff3987f1b28d118ff826&to=6f5966de4af2eb29085ffbcc9cc0116a&pathNum=10`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX11010": //批量查询
         console.log("开始任务：" + oo[o.title]);
@@ -179,7 +182,7 @@ async function dotask(taskList) {
           `batchquery/show?exportkey=xlTM-TogKuTwFXlQeIXL0-Z9C*YO4vCwtkRdM7XV9*7FpZRZtSR8*2qgItOy*xqmSxZSsju-YgmZmd`,
           "get"
         );
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX12001": //添加监控
         console.log("开始任务：" + oo[o.title]);
@@ -190,13 +193,13 @@ async function dotask(taskList) {
         }
         await get(`zxcenter/addMonitorAjax?pid=29710155220353`, "get");
         await get(`zxcenter/cancelMonitorAjax?pid=29710155220353`, "get");
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX12002": //添加关注
         console.log("开始任务：" + oo[o.title]);
         await get(`my/addCollectAjax`, "post", `pid=34527616977197`);
         await get(`my/delCollectAjax`, "post", `pid=34527616977197`);
-        await sleep(5000);
+        await sleep(radomTimers());
         break;
       case "CX12005": //分享好友
         console.log("开始任务：" + oo[o.title]);
@@ -211,7 +214,7 @@ async function dotask(taskList) {
           await get(`m/?uid=${uid}`, "get");
           await get(`m/getuserinfoAjax?uid=${uid}`, "get");
           headers.cookie = aqcookie;
-          await sleep(500);
+          await sleep(radomTimers());
         }
         break;
       case "CX12007": //高级搜索
@@ -233,7 +236,7 @@ async function dotask(taskList) {
       default:
         break;
     }
-    await sleep(5000);
+    await sleep(radomTimers());
     console.log("  去领取爱豆");
     let clres = await get(
       `zxcenter/claimUserTaskAjax?taskCode=${o.title}`,
@@ -288,8 +291,7 @@ async function aqc() {
       }
     }
   } else {
-    msg +=
-      "请手动抓取cookies";
+    msg += "请手动抓取cookies";
   }
   console.log(msg);
   await notify.sendNotify($.name, msg);
@@ -307,9 +309,7 @@ if (aqcookie) {
   aqc();
   //console.log("爱企查共:" + aqcookieArr.length + "个账号");
 } else {
-  console.log(
-    "请手动抓取cookies"
-  );
+  console.log("请手动抓取cookies");
   return;
 }
 
