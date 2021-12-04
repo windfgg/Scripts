@@ -1,5 +1,5 @@
 # WindFgg——Scripts
-WindFggr自用脚本仓库
+WindFgg自用脚本仓库
 
 # Special statement
 
