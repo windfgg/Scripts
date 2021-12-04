@@ -1,5 +1,5 @@
 /*
- 0 0,30 8 * * ? https://ghproxy.com/github.com/WindFgg/QuantumultX_Conf/blob/main/Scripts/aiqicha.js 爱企查日常任务
+ cron "30 10 * * *" ql_aiqicha.js
  爱企查邀请连接：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
  手动抓取CK:https://passport.baidu.com/v2/?login 一个BDUSS=xxxxx;就行了 请安装axios依赖
