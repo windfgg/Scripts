@@ -1,8 +1,9 @@
 /* 
- cron "0 30 10 * * ?" ql_aiqichaShop.js
+ cron "0 0 * * * ?" ql_aiqichaShop.js
 
- 爱妻查商城监控 
+ 爱妻查商城监控  
  多商品请用逗号分割 格式:AQ03006,AQ03007,AQ03008 青龙变量aqcGood
+ 默认定时每一个小时 如需自定义请自己设置cron
 
  AQ03006 爱奇艺月卡
  AQ03007 爱奇艺季卡
