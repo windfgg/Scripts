@@ -60,6 +60,7 @@ async function checkEK () {
 
                 console.log(msg)
                 if (msg != '') {
+                    msg += '\n\n兑换地址: https://qiye.baidu.com/usercenter/#/mall'
                     await notify.sendNotify($.name, msg, '');
                 }
             } else {
