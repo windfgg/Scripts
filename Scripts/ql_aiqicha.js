@@ -1,5 +1,5 @@
 /*
- cron "0 30 10/19 * * ?" ql_aiqicha.js
+ cron "0 30 10,19 * * ?" ql_aiqicha.js
  爱企查邀请连接：https://aiqicha.baidu.com/m/usercenter/inviteCode?uid=xlTM-TogKuTwvdzTq9EFdGvdxrmJpAANFgmd
 
  手动抓取CK:https://passport.baidu.com/v2/?login 一个BDUSS=xxxxx;就行了 请安装axios依赖
@@ -199,6 +199,7 @@ async function dotask (taskList) {
 }
 
 async function aqc () {
+ try{
   msg = "【爱企查】："
   console.log("爱企查每日任务开始")
   if (aqcookieArr) {
@@ -239,6 +240,9 @@ async function aqc () {
   console.log(msg);
   await notify.sendNotify($.name, msg);
   return msg
+ }catch(err){
+   console.log(err);
+ }
 }
 
 if (aqcookie) {
