@@ -1,4 +1,5 @@
 /**
+ * cron "0 0 8 * * ?" ql_laotoule.js
  * 老头乐 仅支持单账号 每日签到 每日分享 
  * 变量名称: ltltoken 需要自己用抓包 headers一个名为token的值
  * 需要安装 request
